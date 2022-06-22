@@ -1,16 +1,26 @@
 cpf = '16899535009'
-cpf_lista = list(cpf)
+novo_cpf = cpf[:-2]
+total = 0
 
-print(cpf_lista)
+reverso = 10
 
-contador = 10
-novo_cpf = []
-digito1 = 0
+for index in range(19):
+    if index > 8:
+        index -= 9
 
-for indice_list in cpf_lista:
-    if contador > 2:
-        digito1 += contador * int(indice_list)
-        print(digito1)
+    total += int(novo_cpf[index]) * reverso
 
-        contador -= 1
-        
+    reverso -= 1
+    if reverso < 2:
+        reverso = 11
+        d = 11 - (total % 11)
+
+        if d > 9:
+            d = 0
+        total = 0
+        novo_cpf += str(d)
+
+if novo_cpf == cpf:
+    print('CPF Valido!')
+else:
+    print('CPF Invalido')
