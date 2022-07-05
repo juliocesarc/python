@@ -1,0 +1,6 @@
+{
+    "python:pythonPath": "/Users/eriki/Documents/estudos/python/venv",
+    "code-runner.executorMap": {
+        "python": "venv/Scripts/python.exe",
+    }
+}
