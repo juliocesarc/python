@@ -1,6 +1,3 @@
-from pickle import NONE
-
-
 def func(a1, a2, a3, a4, a5, nome = None, a6 = None):
     print(a1, a2, a3, a4, a5, nome, a6)
 
