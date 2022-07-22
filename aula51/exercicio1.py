@@ -15,4 +15,5 @@ class Pessoa:
         self._nome = valor.title()
 
 p1 = Pessoa('JOÃOZINHO', 32)
+
 print(p1.nome)
