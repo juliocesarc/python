@@ -28,12 +28,8 @@ if __name__ == '__main__':
     browser = make_chrome_browser(*options)
 
     browser.get('https://www.youtube.com/')
-    sleep(4)
+    sleep(2)
     browser.find_element(By.NAME, 'search_query').click()
-    #btn_pesquisar = browser.find_element(By.XPATH, '//*[@id="search-icon-legacy"]')
-    browser.find_element(By.NAME, 'search_query').send_keys('The Wanted - Glad You Came', Keys.ENTER)
-    sleep(4)
-    videos = browser.find_elements(By.ID, 'video-title')
-    videos[1].click()
-    #btn_pesquisar.click()
-    
+    browser.find_element(By.NAME, 'search_query').send_keys('somewhere over the rainbow', Keys.ENTER)
+    sleep(2)
+    browser.find_element(By.PARTIAL_LINK_TEXT, 'Somewhere over the Rainbow').click()
