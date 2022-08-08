@@ -21,7 +21,7 @@ class AgendaDB:
         self.conn.commit()
 
     def excluir(self, id):
-        consulta = 'DELETE FROM agena WHERE id=?'
+        consulta = 'DELETE FROM agenda WHERE id=?'
         self.cursor.execute(consulta, (id,))
         self.conn.commit()
 
